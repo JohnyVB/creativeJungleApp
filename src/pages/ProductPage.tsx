@@ -11,7 +11,6 @@ export const ProductPage = () => {
         <View style={{
             alignItems: 'center'
         }}>
-
             <FlatList
                 data={products}
                 keyExtractor={prod => prod.id}
@@ -19,7 +18,6 @@ export const ProductPage = () => {
                 showsVerticalScrollIndicator={false}
                 numColumns={2}
             />
-
         </View>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Dimensions, Image } from 'react-native';
 import { Products } from '../interfaces/product.interface';
+import { BtnRemove } from './BtnRemove';
 
 const windowWi = Dimensions.get('window').width;
 
@@ -21,11 +22,14 @@ export const ProductCard = ({ product }: Props) => {
             </View>
             <Image style={styles.image} source={require('../../assets/products.png')} />
             <Text style={styles.textDesc}>{product.desc}</Text>
+
+            <BtnRemove id={product.id} supplier={false} />
+
         </View>
     )
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     cardContainer: {
         marginHorizontal: 10,
         backgroundColor: 'white',
@@ -44,7 +48,6 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     textDesc: {
-        zIndex: 100,
         fontSize: 10,
         marginTop: 8,
     },
@@ -54,7 +57,6 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         top: 0,
         right: 0,
-        zIndex: 1,
         opacity: 0.4
     }
 });

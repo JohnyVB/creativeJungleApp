@@ -66,19 +66,15 @@ export const useStore = create<Store>((set) => ({
         }
     ],
     addSupp: (suppCode: string, name: string, desc: string) => set((state: any) => ({
-        ...state,
-        suppliers: state.suppliers.push({ id: uuid(), suppCode, name, desc })
+        suppliers: [...state.suppliers, { id: uuid(), suppCode, name, desc }]
     })),
     removeSupp: (id: string) => set((state: any) => ({
-        ...state,
         suppliers: state.suppliers.filter((item: Supplier) => item.id !== id)
     })),
     addProd: (prodCode: string, name: string, desc: string) => set((state: any) => ({
-        ...state,
-        products: state.products.push({ id: uuid(), prodCode, name, desc })
+        products: [...state.products, { id: uuid(), prodCode, name, desc }]
     })),
     removeProd: (id: string) => set((state: any) => ({
-        ...state,
         products: state.products.filter((item: Products) => item.id !== id)
     })),
 }))

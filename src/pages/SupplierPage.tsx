@@ -1,7 +1,7 @@
-import React from 'react'
-import { FlatList, View } from 'react-native'
-import { useStore } from '../hooks/useStore'
-import { SupplierCard } from '../components/SupplierCard'
+import React from 'react';
+import { FlatList, View } from 'react-native';
+import { useStore } from '../hooks/useStore';
+import { SupplierCard } from '../components/SupplierCard';
 
 export const SupplierPage = () => {
 

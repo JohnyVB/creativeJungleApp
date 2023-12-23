@@ -1,9 +1,9 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ProductPage } from '../pages/ProductPage';
 import { SupplierPage } from '../pages/SupplierPage';
 import { Ionicons } from '@expo/vector-icons';
 import { AddPage } from '../pages/AddPage';
-
 
 const Tab = createBottomTabNavigator();
 
